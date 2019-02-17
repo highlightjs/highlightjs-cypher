@@ -35,4 +35,4 @@ hljs.initHighlightingOnLoad();
 
 ## Licence
 
-© 2019 <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img style="vertical-align: middle" src="https://img.shields.io/badge/License-CC0%201.0-660000.svg" alt="CC0 1.0" ></a> highlight.js
+© 2019 <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img align="top" src="https://img.shields.io/badge/License-CC0%201.0-660000.svg" alt="CC0 1.0" ></a> highlight.js
