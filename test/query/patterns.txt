@@ -1,0 +1,1 @@
+(p:Person {name: "Jennifer"})-[rel:LIKES]->(g:Technology {type: "Graphs"})

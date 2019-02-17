@@ -1,0 +1,4 @@
+FOREACH (_ in CASE row.type WHEN "DIRECTED" then [1] else [] end | MERGE (p)-[:DIRECTED]->(m))
+FOREACH (_ in CASE row.type WHEN "PRODUCED" then [1] else [] end | MERGE (p)-[:PRODUCED]->(m))
+FOREACH (_ in CASE row.type WHEN "WROTE"    then [1] else [] end | MERGE (p)-[:WROTE   ]->(m))
+FOREACH (_ in CASE row.type WHEN "REVIEWED" then [1] else [] end | MERGE (p)-[:REVIEWED]->(m))

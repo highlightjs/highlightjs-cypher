@@ -1,0 +1,4 @@
+()
+(p:Person)
+(:Technology
+(work:Company)

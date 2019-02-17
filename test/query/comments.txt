@@ -1,0 +1,4 @@
+()                  //anonymous node (no label or variable) can refer to any node in the database
+(p:Person)          //using variable p and label Person
+(:Technology)       //no variable, label Technology
+(work:Company)      //using variable work and label Company

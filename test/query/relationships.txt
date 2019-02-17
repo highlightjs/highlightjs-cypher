@@ -1,0 +1,8 @@
+// data stored with this direction
+CREATE (p:Person)-[:LIKES]->(t:Technology)
+
+// query relationship backwards will not return results
+MATCH (p:Person)<-[:LIKES]-(t:Technology)
+
+// better to query with undirected relationship unless sure of direction
+MATCH (p:Person)-[:LIKES]-(t:Technology)
