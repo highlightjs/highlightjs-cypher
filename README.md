@@ -1,38 +1,67 @@
 ![logo](logo.svg)
 
-## Cypher language syntax highlighting plugin for [highlight.js](https://highlightjs.org/)
+# Cypher - a language grammar for [highlight.js](https://highlightjs.org/)
+
+![version](https://badgen.net/npm/v/highlightjs-cypher) ![license](https://badgen.net/badge/license/CC0%201.0/blue)
+![install size](https://badgen.net/packagephobia/install/highlightjs-cypher) ![minified size](https://badgen.net/bundlephobia/min/highlightjs-cypher)
 
 Cypher is a declarative graph query language created by [Neo4j](https://neo4j.com/) for the graph database management system.
 
-For more about the Cypher here:
+## Usage
 
-* [The Neo4j Cypher Manual](https://neo4j.com/docs/cypher-manual/current/#cypher-intro)
+Simply include the Highlight.js library in your webpage or Node app, then load this module.
 
-## Getting started
+### Static website or simple usage
 
-You must add the `highlight.js` file from [highlight.js](https://github.com/highlightjs/highlight.js) in your web page or node app, load up this module and apply it to `hljs`.
+Simply load the module after loading Highlight.js. You'll use the minified version found in the `dist` directory. This module is just a CDN build of the language, so it will register itself as the Javascript is loaded.
 
-If you are not using a build system and just want to embed this in your webpage:
-
-```javascript
-<script type="text/javascript" src="js/highlight.pack.js"></script>
-<script type="text/javascript" src="js/cypher.js"></script>
+```html
+<script type="text/javascript" src="/path/to/highlight.min.js"></script>
+<script type="text/javascript" charset="UTF-8"
+  src="/path/to/highlightjs-cypher/dist/cypher.min.js"></script>
 <script type="text/javascript">
-    hljs.registerLanguage('cypher', window.hljsDefineCypher);
-    hljs.initHighlightingOnLoad();
+  hljs.initHighlightingOnLoad();
 </script>
 ```
 
-If you are using `webpack` or `rollup` or `browserify` or `node`:
+### Using directly from the UNPKG CDN
+
+```html
+<script type="text/javascript"
+  src="https://unpkg.com/highlightjs-cypher@master/dist/cypher.min.js"></script>
+```
+
+- More info: <https://unpkg.com>
+
+### With Node or another build system
+
+If you're using Node / Webpack / Rollup / Browserify, etc, simply require the language module, then register it with Highlight.js.
 
 ```javascript
 var hljs = require('highlightjs');
-var hljsDefineCypher = require('highlightjs-cypher');
+var hljsRobotsTxt = require('highlightjs-cypher');
 
-hljsDefineCypher(hljs);
+hljs.registerLanguage("cypher", hljsRobotsTxt);
 hljs.initHighlightingOnLoad();
 ```
 
-## Licence
+## License
 
-© 2019 <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img align="top" src="https://img.shields.io/badge/License-CC0%201.0-660000.svg" alt="CC0 1.0" ></a> highlight.js
+Highlight.js is released under the CC0 1.0 License. See [LICENSE][1] file
+for details.
+
+### Author
+
+Johannes Wienke <languitar@semipol.de>
+
+### Maintainer
+
+Gustavo Reis <gusbemacbe@gmail.com>
+
+## Links
+
+- The official site for the Highlight.js library is <https://highlightjs.org/>.
+- The Highlight.js GitHub project: <https://github.com/highlightjs/highlight.js>
+- Learn more about Cypher: <https://neo4j.com/docs/cypher-manual/current/#cypher-intro>
+
+[1]: https://github.com/highlightjs/highlightjs-cypher/blob/master/LICENSE
