@@ -1,13 +1,11 @@
 /*
  * Language: Cypher
- * Contributors: 
+ * Contributors:
    * Johannes Wienke <languitar@semipol.de>
    * Gustavo Reis <gusbemacbe@gmail.com>
 */
 
-var module = module ? module : {};     // shim for browser use
-
-function hljsDefineCypher(hljs) 
+module.exports = function (hljs)
 {
   return {
     case_insensitive: true,
