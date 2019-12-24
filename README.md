@@ -28,7 +28,7 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 
 ```html
 <script type="text/javascript"
-  src="https://unpkg.com/highlightjs-cypher@master/dist/cypher.min.js"></script>
+  src="https://unpkg.com/highlightjs-cypher/dist/cypher.min.js"></script>
 ```
 
 - More info: <https://unpkg.com>
