@@ -1,19 +1,27 @@
 /*
- Language: Cypher
- Contributors: Johannes Wienke <languitar@semipol.de>
- */
+ * Language: Cypher
+ * Contributors: 
+   * Johannes Wienke <languitar@semipol.de>
+   * Gustavo Reis <gusbemacbe@gmail.com>
+*/
 
-module.exports = function (hljs) {
+var module = module ? module : {};     // shim for browser use
+
+function hljsDefineCypher(hljs) 
+{
   return {
     case_insensitive: true,
-    keywords: {
+      keywords:
+    {
       keyword: 'start match where return union foreach with as limit skip unwind has distinct optional else end then case when create order by set',
-      literal: 'true false null'
+        literal: 'true false null'
     },
-    contains: [
+    contains:
+    [
       hljs.QUOTE_STRING_MODE,
       hljs.APOS_STRING_MODE,
       hljs.C_NUMBER_MODE,
+
       {
         className: 'type',
         begin: /((-|>)?\s?\(|-\[)\w*:/,
@@ -30,5 +38,6 @@ module.exports = function (hljs) {
         }
       }
     ]
-  };
+  }
 }
+
