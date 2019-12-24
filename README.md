@@ -39,7 +39,7 @@ If you're using Node / Webpack / Rollup / Browserify, etc, simply require the la
 
 ```javascript
 var hljs = require('highlightjs');
-var hljsRobotsTxt = require('highlightjs-cypher');
+var hljsCypher = require('highlightjs-cypher');
 
 hljs.registerLanguage("cypher", hljsRobotsTxt);
 hljs.initHighlightingOnLoad();
