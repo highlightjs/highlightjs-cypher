@@ -3,17 +3,14 @@
   "version": "1.0.0",
   "description": "Cypher Query Language of neo4j syntax highlighting plugin for highlight.js",
   "main": "cypher.js",
-  "scripts": 
-  {
+  "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
-  "repository": 
-  {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/highlightjs/highlightjs-cypher.git"
   },
-  "keywords": 
-  [
+  "keywords": [
     "cypher",
     "neo4j",
     "hljs",
@@ -22,15 +19,16 @@
   ],
   "author": "Gustavo Reis",
   "license": "CC0-1.0",
-  "bugs": 
-  {
+  "bugs": {
     "url": "https://github.com/highlightjs/highlightjs-cypher/issues"
   },
   "homepage": "https://github.com/highlightjs/highlightjs-cypher#readme",
-  "devDependencies": 
-  {
+  "devDependencies": {
     "highlightjs": "^9.10.0",
     "mocha": "^5.2.0",
     "should": "^13.2.3"
+  },
+  "dependencies": {
+    "cdn": "^1.1.1"
   }
 }
