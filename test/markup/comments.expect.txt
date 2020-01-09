@@ -1,0 +1,4 @@
+()                  <span class="hljs-comment">// anonymous node (no label or variable) can refer to any node in the database</span>
+(p:<span class="hljs-type">Person</span>)          <span class="hljs-comment">// using variable p and label Person</span>
+(:<span class="hljs-type">Technology</span>)       <span class="hljs-comment">// no variable, label Technology</span>
+(work:<span class="hljs-type">Company</span>)      <span class="hljs-comment">// using variable work and label Company</span>

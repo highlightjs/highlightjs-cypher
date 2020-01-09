@@ -1,0 +1,4 @@
+()
+(p:<span class="hljs-type">Person</span>)
+(:<span class="hljs-type">Technology</span>
+(work:<span class="hljs-type">Company</span>)
