@@ -33,6 +33,9 @@ describe('Cypher syntax highlighting', () =>
 
   itShouldPerformSyntaxHighlighting();
 
+  // The following test is ignored because the language detected is pgsql.
+  // Since the Cypher syntax can be confused with SQL, I don't think we should use "highlightAuto" (as it will produce unexpected results)
+  // Please note that Highlight.js can also return css or lisp depending on the code used.
   xit('should detect cypher language', async () =>
   {
     var code = await readFile(path.join(__dirname, 'detect', 'default.txt'), 'utf-8');
