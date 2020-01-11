@@ -18,7 +18,13 @@ module.exports = function (hljs)
         hljs.QUOTE_STRING_MODE,
         hljs.APOS_STRING_MODE,
         hljs.C_NUMBER_MODE,
-
+        {
+          className: 'string',
+          begin: '`',
+          end: '`',
+          illegal: '\\n',
+          contains: [hljs.BACKSLASH_ESCAPE]
+        },
         {
           className: 'type',
           begin: /((-|>)?\s?\(|-\[)\w*:/,
