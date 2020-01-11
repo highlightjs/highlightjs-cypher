@@ -10,7 +10,7 @@ module.exports = function (hljs)
     case_insensitive: true,
     keywords:
       {
-        keyword: 'call start match where return union foreach with as limit skip unwind has distinct optional else end then case when create order by set',
+        keyword: 'as asc ascending assert by call case commit constraint create csv cypher delete desc descending detach distinct drop else end ends explain fieldterminator foreach from headers in index is join limit load match merge on optional order periodic profile remove return scan set skip start starts then union unique unwind using when where with yield',
         literal: 'true false null'
       },
     contains:
