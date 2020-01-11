@@ -10,3 +10,5 @@
 <span class="hljs-keyword">MATCH</span> (kristen:<span class="hljs-type">Customer</span> {name:<span class="hljs-string">'Kristen'</span>})-[rel:<span class="hljs-type">PURCHASED</span>]-(<span class="hljs-keyword">order</span>:<span class="hljs-type">Order</span>)
 <span class="hljs-keyword">RETURN</span> <span class="hljs-keyword">order</span>.orderId <span class="hljs-keyword">AS</span> OrderID, <span class="hljs-keyword">order</span>.orderDate <span class="hljs-keyword">AS</span> `Purchase Date`,
        kristen.customerIdNo <span class="hljs-keyword">AS</span> CustomerID, <span class="hljs-keyword">order</span>.orderNumOfLineItems <span class="hljs-keyword">AS</span> `Number Of Items`
+
+<span class="hljs-keyword">CALL</span> db.propertyKeys

@@ -10,3 +10,5 @@ RETURN company.name
 MATCH (kristen:Customer {name:'Kristen'})-[rel:PURCHASED]-(order:Order)
 RETURN order.orderId AS OrderID, order.orderDate AS `Purchase Date`,
        kristen.customerIdNo AS CustomerID, order.orderNumOfLineItems AS `Number Of Items`
+
+CALL db.propertyKeys
