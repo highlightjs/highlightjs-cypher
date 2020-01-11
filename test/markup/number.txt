@@ -1,0 +1,5 @@
+MATCH (p:Person {born: 1965})
+RETURN p.name, p.born
+
+MATCH (m:Movie {released:2003, tagline: 'Free your mind'})
+RETURN m
