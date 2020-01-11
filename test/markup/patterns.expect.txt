@@ -1,0 +1,1 @@
+(p:<span class="hljs-type">Person</span> {name: <span class="hljs-string">"Jennifer"</span>})-[rel:<span class="hljs-type">LIKES</span>]-&gt;(g:<span class="hljs-type">Technology</span> {type: <span class="hljs-string">"Graphs"</span>})
