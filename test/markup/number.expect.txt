@@ -1,0 +1,5 @@
+<span class="hljs-keyword">MATCH</span> (p:<span class="hljs-type">Person</span> {born: <span class="hljs-number">1965</span>})
+<span class="hljs-keyword">RETURN</span> p.name, p.born
+
+<span class="hljs-keyword">MATCH</span> (m:<span class="hljs-type">Movie</span> {released:<span class="hljs-number">2003</span>, tagline: <span class="hljs-string">'Free your mind'</span>})
+<span class="hljs-keyword">RETURN</span> m
