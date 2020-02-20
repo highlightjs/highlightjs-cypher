@@ -46,6 +46,42 @@ hljs.registerLanguage("cypher", hljsCypher);
 hljs.initHighlightingOnLoad();
 ```
 
+### React
+
+You need to import both Highlight.js and third-party language like Cypher:
+
+```js
+import React, {Component} from 'react'
+import 'highlight.js/scss/darcula.scss' # your favourite theme
+import cypher from './cypher'
+import hljs from 'highlight.js'
+hljs.registerLanguage('cypher', cypher);
+
+class Highlighter extends Component
+{
+  constructor(props)
+  {
+    super(props);
+    hljs.initHighlightingOnLoad();
+  }
+
+  render()
+  {
+    let {children} = this.props;
+    return
+    {
+      <pre ref={(node) => this.node = node}>
+        <code className="cypher">
+          {children}
+        </code>
+      </pre>
+    }
+  }
+}
+
+export default Highlighter;
+```
+
 ## License
 
 Highlight.js is released under the CC0 1.0 License. See [LICENSE][1] file
