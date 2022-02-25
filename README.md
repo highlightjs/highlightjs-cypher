@@ -21,7 +21,7 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 <script type="text/javascript" charset="UTF-8"
   src="/path/to/highlightjs-cypher/dist/cypher.min.js"></script>
 <script type="text/javascript">
-  hljs.initHighlightingOnLoad();
+  hljs.highlightAll();
 </script>
 ```
 
@@ -43,7 +43,7 @@ var hljs = require('highlightjs');
 var hljsCypher = require('highlightjs-cypher');
 
 hljs.registerLanguage("cypher", hljsCypher);
-hljs.initHighlightingOnLoad();
+hljs.highlightAll();
 ```
 
 ### React
@@ -62,7 +62,7 @@ class Highlighter extends Component
   constructor(props)
   {
     super(props);
-    hljs.initHighlightingOnLoad();
+    hljs.highlightAll();
   }
 
   render()
