@@ -1,6 +1,6 @@
 {
   "name": "highlightjs-cypher",
-  "version": "1.1.1",
+  "version": "1.1.5",
   "description": "Cypher Query Language of neo4j syntax highlighting plugin for highlight.js",
   "main": "src/cypher.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "should": "^13.2.3"
   },
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "mkdirp": "^1.0.4"
   }
 }
