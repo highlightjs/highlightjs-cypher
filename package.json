@@ -25,11 +25,11 @@
   "homepage": "https://github.com/highlightjs/highlightjs-cypher#readme",
   "devDependencies": {
     "highlight.js": "^10.7.2",
-    "mocha": "^5.2.0",
+    "mocha": "^10.0.0",
     "should": "^13.2.3"
   },
   "dependencies": {
-    "minimist": "^1.2.5",
+    "minimist": ">=1.2.6",
     "mkdirp": "^1.0.4"
   }
 }
