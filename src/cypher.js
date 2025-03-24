@@ -10,7 +10,7 @@ module.exports = function (hljs)
     case_insensitive: true,
     keywords:
       {
-        keyword: 'as asc ascending and assert by call case collect commit constraint create csv cypher delete desc descending detach distinct drop else end ends explain fieldterminator for foreach from headers in index is join limit load match merge nodetach not on optional order periodic profile remove return scan set skip start starts then union unique unwind use using when where with yield',
+        keyword: 'as asc ascending and assert by call case collect commit constraint create csv cypher delete desc descending detach distinct drop else end ends explain fieldterminator filter for foreach from headers in index is join let limit load match merge nodetach not on optional order periodic profile remove return scan set skip start starts then union unique unwind use using when where with yield',
         literal: 'true false null',
         $pattern: /(?<=^|\s)[a-zA-Z0-9_\.]+(?=$|\s)/  // allows to better exclude keywords-like matches to be highlighted when not acting as keywords
       },
