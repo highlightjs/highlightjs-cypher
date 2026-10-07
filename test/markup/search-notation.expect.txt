@@ -1,0 +1,10 @@
+[<span class="hljs-keyword">OPTIONAL</span>] <span class="hljs-keyword">MATCH</span> pattern
+<span class="hljs-keyword">SEARCH</span> binding_variable <span class="hljs-keyword">IN</span> (
+  (<span class="hljs-keyword">VECTOR</span> | <span class="hljs-keyword">FULLTEXT</span>) <span class="hljs-keyword">INDEX</span> index_name
+  <span class="hljs-keyword">FOR</span> query [<span class="hljs-keyword">WITH</span> <span class="hljs-keyword">ANALYZER</span> analyzer_string]
+  [<span class="hljs-keyword">WHERE</span> ...]
+  [(<span class="hljs-keyword">SKIP</span> | <span class="hljs-keyword">OFFSET</span>) skip_integer]
+  <span class="hljs-keyword">LIMIT</span> top_k
+) [<span class="hljs-keyword">SCORE</span> <span class="hljs-keyword">AS</span> score_alias]
+[<span class="hljs-keyword">Where</span> ...] [<span class="hljs-keyword">Score</span> <span class="hljs-keyword">As</span> score]
+<span class="hljs-keyword">RETURN</span> [<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">null</span>]

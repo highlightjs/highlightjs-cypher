@@ -1,0 +1,10 @@
+<span class="hljs-keyword">RETURN</span> n.search, n.vector, n.fulltext, n.score, n.analyzer, n.offset
+<span class="hljs-keyword">RETURN</span> n . search, n . vector, n . score
+<span class="hljs-keyword">RETURN</span> $search, $vector, $fulltext, $score, $analyzer, $offset
+<span class="hljs-keyword">RETURN</span> {search: <span class="hljs-number">1</span>, vector: <span class="hljs-number">2</span>, score: <span class="hljs-number">3</span>, fulltext : <span class="hljs-number">4</span>, analyzer : <span class="hljs-number">5</span>, offset : <span class="hljs-number">6</span>}
+<span class="hljs-keyword">RETURN</span> <span class="hljs-string">`SEARCH`</span>, <span class="hljs-string">`VECTOR`</span>, <span class="hljs-string">`SCORE`</span>
+<span class="hljs-keyword">RETURN</span><span class="hljs-functionCall"> vector($embedding, 3, FLOAT32)</span>
+<span class="hljs-keyword">RETURN</span> <span class="hljs-string">&quot;SEARCH VECTOR FULLTEXT SCORE ANALYZER OFFSET&quot;</span>
+<span class="hljs-comment">// SEARCH VECTOR FULLTEXT SCORE ANALYZER OFFSET</span>
+<span class="hljs-comment">/* SEARCH VECTOR FULLTEXT SCORE ANALYZER OFFSET */</span>
+<span class="hljs-keyword">RETURN</span> searchIndex, vector_index, scoreAlias, évector, vectoré

@@ -1,0 +1,10 @@
+RETURN n.search, n.vector, n.fulltext, n.score, n.analyzer, n.offset
+RETURN n . search, n . vector, n . score
+RETURN $search, $vector, $fulltext, $score, $analyzer, $offset
+RETURN {search: 1, vector: 2, score: 3, fulltext : 4, analyzer : 5, offset : 6}
+RETURN `SEARCH`, `VECTOR`, `SCORE`
+RETURN vector($embedding, 3, FLOAT32)
+RETURN "SEARCH VECTOR FULLTEXT SCORE ANALYZER OFFSET"
+// SEARCH VECTOR FULLTEXT SCORE ANALYZER OFFSET
+/* SEARCH VECTOR FULLTEXT SCORE ANALYZER OFFSET */
+RETURN searchIndex, vector_index, scoreAlias, évector, vectoré

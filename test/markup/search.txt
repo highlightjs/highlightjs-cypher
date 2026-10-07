@@ -1,0 +1,17 @@
+MATCH (n)
+SEARCH n IN (
+  VECTOR INDEX embeddings FOR $vector
+  WHERE n.year > 2020
+  LIMIT 5
+) SCORE AS score
+RETURN n, score
+
+match ()-[r]->()
+search r in (
+  fulltext index messages for $query
+  with analyzer 'english'
+  offset 10 limit 5
+) score as score
+return r, score AS relevance
+RETURN
+score AS relevance

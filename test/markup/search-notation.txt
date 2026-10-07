@@ -1,0 +1,10 @@
+[OPTIONAL] MATCH pattern
+SEARCH binding_variable IN (
+  (VECTOR | FULLTEXT) INDEX index_name
+  FOR query [WITH ANALYZER analyzer_string]
+  [WHERE ...]
+  [(SKIP | OFFSET) skip_integer]
+  LIMIT top_k
+) [SCORE AS score_alias]
+[Where ...] [Score As score]
+RETURN [true, false, null]

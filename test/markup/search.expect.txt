@@ -1,0 +1,17 @@
+<span class="hljs-keyword">MATCH</span> (n)
+<span class="hljs-keyword">SEARCH</span> n <span class="hljs-keyword">IN</span> (
+  <span class="hljs-keyword">VECTOR</span> <span class="hljs-keyword">INDEX</span> embeddings <span class="hljs-keyword">FOR</span> $vector
+  <span class="hljs-keyword">WHERE</span> n.year &gt; <span class="hljs-number">2020</span>
+  <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">5</span>
+) <span class="hljs-keyword">SCORE</span> <span class="hljs-keyword">AS</span> score
+<span class="hljs-keyword">RETURN</span> n, score
+
+<span class="hljs-keyword">match</span> ()-[r]-&gt;()
+<span class="hljs-keyword">search</span> r <span class="hljs-keyword">in</span> (
+  <span class="hljs-keyword">fulltext</span> <span class="hljs-keyword">index</span> messages <span class="hljs-keyword">for</span> $query
+  <span class="hljs-keyword">with</span> <span class="hljs-keyword">analyzer</span> <span class="hljs-string">&#x27;english&#x27;</span>
+  <span class="hljs-keyword">offset</span> <span class="hljs-number">10</span> <span class="hljs-keyword">limit</span> <span class="hljs-number">5</span>
+) <span class="hljs-keyword">score</span> <span class="hljs-keyword">as</span> score
+<span class="hljs-keyword">return</span> r, score <span class="hljs-keyword">AS</span> relevance
+<span class="hljs-keyword">RETURN</span>
+score <span class="hljs-keyword">AS</span> relevance

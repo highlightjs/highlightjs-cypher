@@ -10,9 +10,10 @@ module.exports = function (hljs)
     case_insensitive: true,
     keywords:
       {
-        keyword: 'as asc ascending and assert by call case collect commit constraint create csv cypher delete desc descending detach distinct drop else end ends exists explain fieldterminator filter finish for foreach from headers in index is let join limit load match merge nodetach not on optional order periodic profile remove return scan set skip start starts then union unique unwind use using when where with yield',
+        keyword: 'as asc ascending and analyzer assert by call case collect commit constraint create csv cypher delete desc descending detach distinct drop else end ends exists explain fieldterminator filter finish for foreach from fulltext headers in index is let join limit load match merge nodetach not offset on optional order periodic profile remove return scan search set skip start starts then union unique unwind use using vector when where with yield',
         literal: 'true false null',
-        $pattern: /(?<=^|\s)[a-zA-Z0-9_\.]+(?=$|\s)/  // allows to better exclude keywords-like matches to be highlighted when not acting as keywords
+        // Allow syntax-notation punctuation while excluding properties, parameters and map keys.
+        $pattern: /(?<![.$]\s*)(?<=^|[\s([{,|;])[a-zA-Z0-9_.]+(?=$|[\s)\]},|;])(?!\s*:)/
       },
     contains:
       [
@@ -32,6 +33,12 @@ module.exports = function (hljs)
           excludeBegin: true,
           end: '\\W',
           excludeEnd: true,
+        },
+        {
+          // SCORE follows the search expression; its result alias can also be named score.
+          className: 'keyword',
+          begin: /(?<![.$]\s*)(?<=\)\s*|\[\s*)score(?=\s+as\b)/,
+          relevance: 0
         },
         {
           className: 'functionCall',

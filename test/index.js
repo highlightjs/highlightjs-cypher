@@ -1,21 +1,20 @@
 require('should');
 const promisify = require('util').promisify;
 const path = require('path');
-const hljs = require('highlightjs');
+const hljs = require('highlight.js');
 const fs = require('fs');
 const hljsDefineCypher = require('../src/cypher');
 hljs.registerLanguage('cypher', hljsDefineCypher);
 
-const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 
 describe('Cypher syntax highlighting', () =>
 {
-  async function itShouldPerformSyntaxHighlighting()
+  function itShouldPerformSyntaxHighlighting()
   {
     hljs.registerLanguage('cypher', hljsDefineCypher);
-    const files = (await readdir(path.join(__dirname, 'markup')))
-      .filter(f => !f.includes('.expect.'));
+    const files = fs.readdirSync(path.join(__dirname, 'markup'))
+      .filter(f => f.endsWith('.txt') && !f.includes('.expect.')).sort();
     const scenarios = files.map(f => f.replace(/\.txt$/, ''));
     scenarios.forEach(scenario => {
       it(`should perform syntax highlighting on ${scenario}`, async () => {
